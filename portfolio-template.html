@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tharuni Thirumavalavan - Stadtplaner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+        }
+        
+        .contact-links {
+            margin-top: 20px;
+        }
+        
+        .contact-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+        
+        .contact-links a:hover {
+            color: #2980b9;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 60px 0;
+        }
+        
+        .skills h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            color: #555;
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .project-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            background: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .skills-grid, .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Tharuni Thirumavalavan</h1>
+            <p>Stadtplaner | Urban Planner | M.Sc. Raumplanung</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">RWTH Aachen University</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com">✉ Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank">💻 GitHub</a>
+                <a href="cv.pdf" download>📄 Download CV</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Über mich | About</h2>
+            <p>
+                Stadtplaner mit Schwerpunkt auf nachhaltige Mobilität und regionale Entwicklung. 
+                Masterarbeit über integrierte MaaS-Implementierung im Umland des Münchener Flughafens. 
+                Expertise in GIS-Analyse, Stakeholder-Engagement und evidenzbasierter Planung.
+            </p>
+            <p style="margin-top: 15px;">
+                Urban planner specializing in sustainable mobility and regional development. 
+                Master's thesis on integrated MaaS implementation in the Munich Airport region. 
+                Expertise in GIS analysis, stakeholder engagement, and evidence-based planning.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2>Kompetenzen | Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Software</h3>
+                    <ul>
+                        <li>QGIS (Advanced)</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe InDesign</li>
+                        <li>MS Office</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Fachkenntnisse</h3>
+                    <ul>
+                        <li>Räumliche Analyse</li>
+                        <li>Mobilitätsplanung</li>
+                        <li>MaaS Integration</li>
+                        <li>Stakeholder-Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Sprachen</h3>
+                    <ul>
+                        <li>Deutsch (Fließend)</li>
+                        <li>English (Fluent)</li>
+                        <li>Tamil (Native)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <h2>Projekte | Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1: MaaS Thesis -->
+                <div class="project-card">
+                    <div class="project-image">MaaS Framework</div>
+                    <div class="project-content">
+                        <h3>Integrierter Planungsrahmen für MaaS</h3>
+                        <p>
+                            Entwicklung eines integrierten Planungsrahmens für Mobility-as-a-Service 
+                            im Umland des Münchener Flughafens mit systematischer Mobility-Hub-Typologie.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">MaaS</span>
+                            <span class="tag">QGIS</span>
+                            <span class="tag">Regional Planning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Spatial Analysis -->
+                <div class="project-card">
+                    <div class="project-image">GIS Analysis</div>
+                    <div class="project-content">
+                        <h3>Räumliche Analysen München Airport Region</h3>
+                        <p>
+                            Umfassende GIS-basierte Analysen: Siedlungsstruktur, Erreichbarkeit, 
+                            Demographie und Infrastruktur für sechs Umlandgemeinden.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">QGIS</span>
+                            <span class="tag">Spatial Analysis</span>
+                            <span class="tag">Demography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Add your other projects -->
+                <div class="project-card">
+                    <div class="project-image">Project 3</div>
+                    <div class="project-content">
+                        <h3>Dein weiteres Projekt</h3>
+                        <p>
+                            Beschreibung deines dritten Projekts. 2-3 Sätze über das Problem, 
+                            deinen Ansatz und die Ergebnisse.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Tag 1</span>
+                            <span class="tag">Tag 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tharuni Thirumavalavan | Stadtplaner</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                <a href="mailto:your.email@example.com" style="color: #3498db;">contact@thirumavalavan.de</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
